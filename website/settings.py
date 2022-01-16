@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-k8+pb#cxvl3pe*u3iw@)m#dtx%@^q^iah7szzij%e+=entg+5r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nived-website.herokuapp.com']
 
 
 # Application definition
@@ -122,4 +122,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATICFILES_DIRS=[BASE_DIR/'static']
+STATIC_ROOT=BASE_DIR/'static'
