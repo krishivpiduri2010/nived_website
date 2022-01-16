@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+	<p class="money">Money: {{game.money}}</p>
+	<div class="specialities">
+		{% for speciality in specialities %}
+			<div class="speciality">
+				<h2 class="speciality-name">{{speciality.name}}</h2>
+				<p class="speciality-profit">Tip per Customer: <span class="speciality-profit-span">${{speciality.profitpcm}}</span></p>
+				<p class="speciality-description">Description: <span class="speciality-description-span">{{speciality.description}}</span></p>
+			</div>
+		{% endfor %}
+
+		</div>
+
+
+	</div>
+	<div class="chefs">
+		{% for chef in chefs %}
+			<div class="chef">
+				<h3 class="chef-name">{{chef.name}}</h3>
+				<p class="chef-profit">Money per hour: <span class="chef-profit-money">${{chef.profitphr}}</span></span></p>
+			</div>
+		{% endfor %}
+	</div>
+</body>
+</html>
